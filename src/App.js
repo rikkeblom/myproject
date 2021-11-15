@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navigation from "./components/Navigation.js";
+import ProductList from "./components/ProductList";
+import Basket from "./components/Basket";
 
 function App() {
+  const product = {
+    id: 1163,
+    productdisplayname: "Round Neck Jersey",
+    productdescription: "A warm cosy jersey with a stylish round neck.",
+    price: 895,
+    soldOut: 0,
+  };
+
+  const basket = [1, 2, 3];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation />
+      <main>
+        <ProductList product={product} />
+        <Basket basket={basket} />
+      </main>
     </div>
   );
 }

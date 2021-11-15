@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+main {
+  background-color: rgba(73, 52, 190, 0.307);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.productList {
+  background-color: rgba(73, 52, 190, 0.307);
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+article {
+  background-color: rgba(73, 52, 190, 0.307);
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.basket {
+  background-color: rgba(73, 52, 190, 0.307);
+  grid-column: 4;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.myBasket {
+  background-color: rgba(73, 52, 190, 0.307);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  background-color: rgba(73, 52, 190, 0.307);
 }
