@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function Product(props) {
+  console.log(props);
   const [count, setCount] = useState(0);
 
   function addCount() {
@@ -17,9 +18,13 @@ export default function Product(props) {
   }
 
   return (
-    <article style={{ backgroundColor: props.product.soldOut ? "rgba(190, 52, 70, 0.507)" : "rgba(73, 52, 190, 0.307)" }}>
-      <h3>{props.product.productdisplayname}</h3>
-      <p>{props.product.productdescription}</p>
+    <article style={{ backgroundColor: props.soldOut ? "rgba(190, 52, 70, 0.507)" : "rgba(73, 52, 190, 0.307)" }}>
+      <h3>{props.productdisplayname}</h3>
+      <p>
+        {props.articletype} | {props.brandname}
+      </p>
+      <p>Price: {props.price},-</p>
+
       <div>
         <button onClick={removeCount}>-</button>
         <span>{count}</span>

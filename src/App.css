@@ -26,14 +26,6 @@ article {
   gap: 1rem;
 }
 
-.myBasket {
-  background-color: rgba(73, 52, 190, 0.307);
-}
-
-form {
-  background-color: rgba(73, 52, 190, 0.307);
-}
-
 article button {
   display: block;
   margin: 1rem auto;
@@ -54,6 +46,7 @@ article div {
 .open {
   display: initial;
 }
+
 .closed {
   display: none;
 }
