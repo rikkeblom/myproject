@@ -44,3 +44,16 @@ article button {
 article > * {
   margin: 1rem;
 }
+
+article div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.open {
+  display: initial;
+}
+.closed {
+  display: none;
+}
