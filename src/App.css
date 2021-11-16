@@ -33,3 +33,14 @@ article {
 form {
   background-color: rgba(73, 52, 190, 0.307);
 }
+
+article button {
+  display: block;
+  margin: 1rem auto;
+  background-color: rgba(73, 52, 190, 1);
+  color: white;
+  padding: 0.3rem 0.8rem;
+}
+article > * {
+  margin: 1rem;
+}
