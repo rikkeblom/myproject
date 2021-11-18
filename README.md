@@ -1,4 +1,4 @@
-Link: https://app.netlify.com/sites/reactshoprikke/overview
+Link: https://reactshoprikke.netlify.app/
 
 # Getting Started with Create React App
 
