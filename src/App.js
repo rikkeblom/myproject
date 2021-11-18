@@ -1,10 +1,11 @@
 import "./App.css";
+import { useState } from "react";
 import Navigation from "./components/Navigation.js";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 
 function App() {
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1163,
       gender: "Men",
@@ -155,15 +156,37 @@ function App() {
       brandname: "Puma",
       soldout: 0,
     },
-  ];
+  ]);
 
-  const basket = [1, 2, 3];
+  const [basket, setBasket] = useState([]);
+
+  function addToBasket(ev) {
+    setBasket(function (oldBasket) {
+      return oldBasket.concat({ productdisplayname: "t-shirt", price: 120, articletype: "t-shirt", brand: "hummel", id: 5431 });
+    });
+  }
+
+  function addProduct() {
+    console.log("hello");
+    setProducts((oldProducts) => oldProducts.concat({ productdisplayname: "Rikke", price: "12", articletype: "t-shirt", brand: "hummel" }));
+  }
+
+  const productsCopy = [...products];
+  productsCopy.sort((a, b) => {
+    if (a.productdisplayname.toLocaleLowerCase() > b.productdisplayname.toLocaleLowerCase()) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
 
   return (
     <div>
       <Navigation />
+      <button onClick={addProduct}>Add Product</button>
+      <button onClick={addToBasket}>Add to Basket</button>
       <main>
-        <ProductList products={products} />
+        <ProductList products={productsCopy} />
         <Basket basket={basket} />
       </main>
     </div>

@@ -1,3 +1,7 @@
 export default function CheckoutForm() {
-  return <form>Checkout Form</form>;
+  return (
+    <form>
+      <h3>Checkout Form</h3>
+    </form>
+  );
 }
