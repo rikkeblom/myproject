@@ -6,6 +6,11 @@ export default function Product(props) {
 
   function addCount() {
     setCount((previousCount) => previousCount + 1);
+    props.addToBasket({
+      productdisplayname: props.productdisplayname,
+      id: props.id,
+      price: props.price,
+    });
   }
 
   function removeCount() {

@@ -1,8 +1,8 @@
 import Product from "./Product.js";
 
 export default function ProductList(props) {
-  console.log(props);
-  const mapped = props.products.map((product) => <Product {...product} key={product.id} />);
+  // console.log(props);
+  const mapped = props.products.map((product) => <Product addToBasket={props.addToBasket} {...product} key={product.id} />);
 
   return (
     <section className="productList">

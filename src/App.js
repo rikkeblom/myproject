@@ -160,9 +160,10 @@ function App() {
 
   const [basket, setBasket] = useState([]);
 
-  function addToBasket(ev) {
+  function addToBasket(product) {
+    console.log(product);
     setBasket(function (oldBasket) {
-      return oldBasket.concat({ productdisplayname: "t-shirt", price: 120, articletype: "t-shirt", brand: "hummel", id: 5431 });
+      return oldBasket.concat({ productdisplayname: product.productdisplayname, price: product.price, id: product.id });
     });
   }
 
@@ -186,7 +187,7 @@ function App() {
       <button onClick={addProduct}>Add Product</button>
       <button onClick={addToBasket}>Add to Basket</button>
       <main>
-        <ProductList products={productsCopy} />
+        <ProductList addToBasket={addToBasket} products={productsCopy} />
         <Basket basket={basket} />
       </main>
     </div>
