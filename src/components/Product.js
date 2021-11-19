@@ -22,6 +22,8 @@ export default function Product(props) {
     });
   }
 
+  const buttonState = props.soldout ? "soldOut" : "";
+
   return (
     <article style={{ backgroundColor: props.soldout ? "rgba(190, 52, 70, 0.507)" : "rgba(73, 52, 190, 0.307)" }}>
       <h3>{props.productdisplayname}</h3>
@@ -29,11 +31,14 @@ export default function Product(props) {
         {props.articletype} | {props.brandname}
       </p>
       <p>Price: {props.price},-</p>
-
       <div>
-        <button onClick={removeCount}>-</button>
+        <button className={buttonState} disabled={props.soldout} onClick={removeCount}>
+          -
+        </button>
         <span>{count}</span>
-        <button onClick={addCount}>+</button>
+        <button className={buttonState} disabled={props.soldout} onClick={addCount}>
+          +
+        </button>
       </div>
     </article>
   );
