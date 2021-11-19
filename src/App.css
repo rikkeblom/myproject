@@ -1,3 +1,5 @@
+@import "~antd/dist/antd.css";
+
 main {
   background-color: rgba(73, 52, 190, 0.307);
   padding: 1rem;

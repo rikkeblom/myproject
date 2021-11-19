@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navigation from "./components/Navigation.js";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
+import { BackTop } from "antd";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div>
+      <BackTop />
       <Navigation />
       <button onClick={addProduct}>Add Product</button>
       <button onClick={addToBasket}>Add to Basket</button>

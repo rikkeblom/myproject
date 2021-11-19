@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Popover, Button } from "antd";
 
 export default function CheckoutForm() {
   const [name, setName] = useState("");
@@ -12,6 +13,12 @@ export default function CheckoutForm() {
     e.preventDefault();
     console.log(form.current.checkValidity());
   }
+
+  const content = (
+    <div>
+      <p>Click Here to Buy</p>
+    </div>
+  );
 
   return (
     <form ref={form} onSubmit={onSubmit}>
@@ -30,7 +37,9 @@ export default function CheckoutForm() {
         <label htmlFor="date">Date: </label>
         <input type="date" name="date" id="date" />
       </div>
-      <button type="submit">Buy Now</button>
+      <Popover content={content} title="PopUp Title Text">
+        <Button type="primary">Buy Now</Button>
+      </Popover>
     </form>
   );
 }
